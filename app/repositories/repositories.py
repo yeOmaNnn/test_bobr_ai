@@ -14,7 +14,7 @@ class GetWeather:
             "lang": "ru",
         }
         try:
-            response = requests.get(self.base_url, params=params, timeout=10)
+            response = requests.get(self.base_url, params=params, timeout=100)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.Timeout:
